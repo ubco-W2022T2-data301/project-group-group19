@@ -30,4 +30,6 @@ Dovile's article offers a few suggestions to consider when writing your project 
 
 ## Contracted Grade
 
-For this project, we agree to contract for a { A+/A/B/C }.
+For this project, we agree to contract for a {B}.
+
+For our project we are going to compare the difference in CPI of different countries in different areas. Focusing on how the different countries economies function. Comparing how more or less government intervention improves or hinders the economy over a long period of time to get a better understanding of what the best way to run an economy is. We are very interested in working with this financial data set and improving our knowledge about the economy and improving our ability to present data visually in a way that will benefit us in the job market moving forward. Throughout the next few weeks as our skills improve we hope to increase both the visual appeal and readability of our data set. 
