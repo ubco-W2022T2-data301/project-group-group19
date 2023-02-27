@@ -8,7 +8,9 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 ## Describe your topic/interest in about 150-200 words
 
-{Add your stuff here}
+How does the CPI affect a nation's stability, and if there are possible relationships between other nations?
+Effectiveness of Canadian strategies in comparison to other nations, and interest in predicting the rate for the possible future?
+difference between capitalist vs communist CPI policies' effectiveness
 
 ## Describe your dataset in about 150-200 words
 
@@ -17,7 +19,7 @@ The dataset selected for our project is from Organisation for Economic Co-operat
 ## Team Members
 
 - Dylan Saunders: I am a data science major and I am hoping to take an internship with an accounting firm this summer in their data analytics department. 
-- Person 2: one sentence about you!
+- Levi Boswell: Comp Sci major with keen intrest in intellegent machines 
 - Person 3: one sentence about you!
 
 ## Images
