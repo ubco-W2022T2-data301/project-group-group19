@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 
-def extract_data(data, country='CAD', data_type='ENRG', year_range=[2018, 2022]) -> pd.DataFrame:
+def extract_data(data, country='CAN', data_type='ENRG', year_range=[2018, 2022]) -> pd.DataFrame:
     '''
     extracts particular data in a format of choosing
 
@@ -30,19 +30,21 @@ def extract_data(data, country='CAD', data_type='ENRG', year_range=[2018, 2022])
     '''
     if data is not pd.DataFrame:
         data = pd.DataFrame(data)
-    print(data['SUBJECT'].unique())
-    print(data_type == data['SUBJECT'].unique()[0])
+
     df = (
-        data[data['LOCATION'] == country]
+         data.groupby('LOCATION')
+        .get_group(country)
         .groupby('SUBJECT')
         .get_group(data_type)
         .groupby('FREQUENCY')
         .get_group('M')
         .reset_index(drop=True)
+       
     )
 
     df['TIME'] = _convertDateTime(df['TIME'])
     df = _extract_data_by_year(df, year_range[0], year_range[1])
+    
     return df
 
 
@@ -112,5 +114,9 @@ def _extract_data_by_year(df, start_year, end_year):
     filtered_df = df[(df['date'].dt.year >= start_year)
                      & (df['date'].dt.year <= end_year)]
     filtered_df['date'] = filtered_df['date'].dt.strftime('%b-%Y')
-
+   
+    filtered_df = (filtered_df
+                   .drop('date',axis=1, inplace=True)
+                   .reset_index(drop=True)
+    )
     return filtered_df
