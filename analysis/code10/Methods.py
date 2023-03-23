@@ -4,9 +4,23 @@ import numpy as np
 import pandas as pd
 
 
-def extract_data(data, country='CAN', data_type='ENRG', year_range=[2018, 2022]) -> pd.DataFrame:
+def extract_data(data: pd.DataFrame, country='CAD', data_type='ENRG', year_range=[2018, 2022]) -> pd.DataFrame:
     '''
     extracts particular data in a format of choosing
+
+    ------
+    #### COUNTRY PARAM
+    ------
+    ['AUS' 'AUT' 'BEL' 'CAN' 'CZE' 'DNK' 'FIN' 'FRA' 'DEU' 'GRC' 'HUN' 'ISL'
+ 'IRL' 'ITA' 'JPN' 'KOR' 'LUX' 'MEX' 'NLD' 'NZL' 'NOR' 'POL' 'PRT' 'SVK'
+ 'ESP' 'SWE' 'CHE' 'TUR' 'GBR' 'USA' 'BRA' 'CHL' 'CHN' 'EST' 'IND' 'IDN'
+ 'ISR' 'RUS' 'SVN' 'ZAF' 'OECD' 'OECDE' 'G-7' 'COL' 'LVA' 'SAU' 'EA19'
+ 'ARG' 'LTU' 'CRI' 'G-20' 'EU27_2020']
+
+    -------
+    ####  DATA TYPE PARAM
+    -------
+    ['ENRG' 'FOOD' 'TOT' 'TOT_FOODENRG']
 
     ------------- 
     #### params
@@ -22,29 +36,29 @@ def extract_data(data, country='CAN', data_type='ENRG', year_range=[2018, 2022])
 
     year_range - list
     : the range as a length 2 list to and from that will be extracted default 2018-2022
-    
+
     ------
     #### returns
     -------    
     A data frame that has been processed to specifications
     '''
-    if data is not pd.DataFrame:
-        data = pd.DataFrame(data)
-
-    df = (
-         data.groupby('LOCATION')
+    df: pd.DataFrame = (
+        data
+        .groupby('LOCATION')
         .get_group(country)
         .groupby('SUBJECT')
         .get_group(data_type)
-        .groupby('FREQUENCY')
-        .get_group('M')
+        # .groupby('FREQUENCY')
+        # .get_group('M')
+        .set_index('FREQUENCY')
+        .drop(index=[freq for freq in data['FREQUENCY'].unique() if freq != 'M'])
         .reset_index(drop=True)
-       
+
     )
 
     df['TIME'] = _convertDateTime(df['TIME'])
     df = _extract_data_by_year(df, year_range[0], year_range[1])
-    
+
     return df
 
 
@@ -57,7 +71,7 @@ def load(data_file_path) -> pd.DataFrame:
     ------
     data_file_path
     : the relative file path to the .scv file
-    
+
     ------
     #### returns
     ------
@@ -66,22 +80,22 @@ def load(data_file_path) -> pd.DataFrame:
     df1 = pd.read_csv(data_file_path).drop(axis=1, columns='Flag Codes')
     return df1
 
-def save(data, name):
+
+def save(data: pd.DataFrame, name):
     '''
     save data frame to file with specified name
-   
+
     -----
     #### params
     -----
     data - DataFrame
     : the data you wish to save
-    
+
     name - str
     : the name without file extenstion of you want file to be named
     : the file type is of .scv
     '''
-    data.to_scv(f"./../../data/processed/{name}.scv")
-    
+    data.to_csv(f"./../data/processed/wrangled/{name}.scv")
 
 
 def _convertDateTime(dataFrame_col):
@@ -100,7 +114,7 @@ def _convertDateTime(dataFrame_col):
     return date
 
 
-def _extract_data_by_year(df, start_year, end_year):
+def _extract_data_by_year(df: pd.DataFrame, start_year, end_year):
     '''
     extracts date range in years to and from start and end year
     and returns the filtered DataFrame
@@ -111,12 +125,12 @@ def _extract_data_by_year(df, start_year, end_year):
         raise IndexError('year is to large. largest possible year is 2022')
 
     df['date'] = pd.to_datetime(df['TIME'], format='%b-%Y')
-    filtered_df = df[(df['date'].dt.year >= start_year)
-                     & (df['date'].dt.year <= end_year)]
+
+    filtered_df = df.loc[(df['date'].dt.year >= start_year)
+                         & (df['date'].dt.year <= end_year)]
     filtered_df['date'] = filtered_df['date'].dt.strftime('%b-%Y')
-   
-    filtered_df = (filtered_df
-                   .drop('date',axis=1, inplace=True)
-                   .reset_index(drop=True)
-    )
+
+    filtered_df.drop('date', axis=1, inplace=True)
+    filtered_df.reset_index(drop=True)
+
     return filtered_df
