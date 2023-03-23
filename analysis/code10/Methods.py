@@ -48,8 +48,6 @@ def extract_data(data: pd.DataFrame, country='CAD', data_type='ENRG', year_range
         .get_group(country)
         .groupby('SUBJECT')
         .get_group(data_type)
-        # .groupby('FREQUENCY')
-        # .get_group('M')
         .set_index('FREQUENCY')
         .drop(index=[freq for freq in data['FREQUENCY'].unique() if freq != 'M'])
         .reset_index(drop=True)
