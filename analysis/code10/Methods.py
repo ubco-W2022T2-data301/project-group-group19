@@ -132,3 +132,25 @@ def _extract_data_by_year(df: pd.DataFrame, start_year, end_year):
     filtered_df.reset_index(drop=True)
 
     return filtered_df
+
+def dateAll(df : pd.DataFrame) -> pd.DataFrame:
+    '''
+    takes a dataframe and drop all none month-year dates 
+    and then parses them into month-####
+    
+    --------
+    #### params
+    -------    
+    df - dataFrame
+    : the data frame to apply constraint
+    
+    ------
+    #### returns
+    -------
+    dataframe
+    '''
+    df = df[df['TIME'].str.contains('M')]    
+    df = df.reset_index(drop=True)
+    df['TIME'] = _convertDateTime(df['TIME'])
+
+    return df
