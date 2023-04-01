@@ -93,7 +93,7 @@ def save(data: pd.DataFrame, name):
     : the name without file extenstion of you want file to be named
     : the file type is of .scv
     '''
-    data.to_csv(f"./../data/processed/wrangled/{name}.scv")
+    data.to_csv(f"./../data/processed/wrangled/{name}.csv")
 
 
 def _convertDateTime(dataFrame_col):
