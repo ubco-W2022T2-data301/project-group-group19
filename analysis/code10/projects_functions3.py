@@ -3,7 +3,7 @@ def load_and_process(csv_file):
     df = pd.read_csv('./../data/raw/Inflationdataset.csv')
     return df
 def clean1(df):
-    df_cleaned = df.copy().drop(['INDICATOR','MEASURE','FREQUENCY', 'Flag Codes'], axis=1)
+    (df_cleaned = df.copy().drop(['INDICATOR','MEASURE','FREQUENCY', 'Flag Codes'], axis=1))
     return df_cleaned
 def cleanTime(df):
     (
