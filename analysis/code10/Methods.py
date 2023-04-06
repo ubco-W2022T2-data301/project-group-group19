@@ -75,7 +75,7 @@ def load(data_file_path) -> pd.DataFrame:
     ------
     DataFrame of .scv file
     '''
-    df1 = pd.read_csv(data_file_path).drop(axis=1, columns='Flag Codes')
+    df1 = pd.read_csv(data_file_path)
     return df1
 
 
