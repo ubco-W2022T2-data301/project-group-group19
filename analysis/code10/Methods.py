@@ -96,7 +96,7 @@ def save(data: pd.DataFrame, name):
     data.to_csv(f"./../data/processed/wrangled/{name}.csv")
 
 
-def _convertDateTime(dataFrame_col):
+def _convertDateTime(dataFrame_col : list):
     '''
     convert Month-YY -> month-YYYY
     '''
@@ -112,7 +112,7 @@ def _convertDateTime(dataFrame_col):
     return date
 
 
-def _extract_data_by_year(df: pd.DataFrame, start_year, end_year):
+def _extract_data_by_year(df: pd.DataFrame, start_year, end_year= 2022)-> pd.DataFrame:
     '''
     extracts date range in years to and from start and end year
     and returns the filtered DataFrame
