@@ -26,7 +26,7 @@ The dataset selected for our project is from Organisation for Economic Co-operat
 
 {You should use this area to add a screenshot of an interesting plot, or of your dashboard}
 
-<img src ="images/Dashboard1.png" width="100px">
+<img src ="images/Dashboard1.png" width="1000px">
 
 ## References
 
