@@ -8,5 +8,11 @@ Our project is focuses on inflation more specifically CPI which stands for consu
 
 
 
-### Question 1:
+### Question 1
+
+#### What affect does a government's economic system and practices have on the nations economic stability and consistency? 
+
 Most countries have conflicting opinions of how to control the economy and by observing how different economies lead to a more efficient or stronger economy we can learn what economies are best over a long term rather than a single year.
+<img src ="images/Violin1.png" width="1000px">
+The first graph is a violin plot which displays 3 different countries total CPI for all years. A violin plot is similar to a box plot which it represents the variation of all total CPI values throughout the years the wider the image the more points in that section. This means the wider the violin plot the more consistent the CPI is through all the years and the skinnier it is the more spread out points are. 
+<img src ="images/Facet2.png" width="1000px">
