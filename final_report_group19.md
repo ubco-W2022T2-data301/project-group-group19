@@ -1,0 +1,2 @@
+### Introduction:
+Our project is focuses on inflation more specifically CPI which stands for consumer price index. CPI is the change in price on a basket of goods either for one subject or type of products or many different onces. CPI is one of the most well-known indicators of inflation and how it has changed over time.
