@@ -18,3 +18,15 @@ The first graph is a violin plot which displays 3 different countries total CPI 
 <img src ="images/Facet2.png" width="1000px">
 
 The second graph is a facet grid of 3 line plots hued by the 3 different subjects. CPI of food, energy, and total. There are also 2 lines one for Australia and one for United States of America. These 2 countries both have a mixed economy meaning by comparing these countries of similar economies in contrast with the last graph of different economies we can see if the trends are similar among all economies or if all of the countries are different even if they have the same economic structure. This would imply that economic structure does not play a large role in the change in CPI which in turn means the inflation for the country. The reason for choosing USA and Australia as well as their similar economies is that they are not near each other and their potential similarities can not be written off as a reliance of each others economies. The graph displays that for all 3 subjects the lines are very similar to each other even more similar than the violin plot of different economic systems. This indicates that different economic systems plays some part in CPI, however that is not the only factor at play in influencing the inflation rate. 
+
+
+### QUESTION 2
+
+### What patterns in the CPI lead to show whether Canada is weakeneing or stenghting its economy over the past 5 years?
+
+
+![noodle graph](images/cad_compare_kde.png)
+
+![viola graph](images/cad_compare_violin.png)
+
+![line lots of line](images/cad_compare_line.png)
