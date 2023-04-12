@@ -2,6 +2,12 @@
 from ctypes import Union
 import numpy as np
 import pandas as pd
+from IPython.display import clear_output
+
+def hide_i_mean_fix_warrnings():
+    for i in range(10):
+        clear_output(wait=True)
+        print("")
 
 
 def extract_data(data: pd.DataFrame, country='CAD', data_type='ENRG', year_range=[2018, 2022]) -> pd.DataFrame:
