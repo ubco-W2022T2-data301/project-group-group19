@@ -48,11 +48,11 @@ We can initially perform an analysis to see whether the trends in the different 
 
 We can see that Food prices and energy prices are both related to each other and have relatively similar trends. This means the total CPI of both together is good to use for a general long term CPI comparison across countries. Next is to see the trends of CPI of a developing country, next to a developed country. Choosing China, India, Sweden, and Canada as all have a similar econmic model post 2002. 
 
-![Multiple country barplot](images/Analysis 3 multiple facet.png)
+![Multiple country barplot](images/A3_facet.png)
 
 We can see that the system works similarly for India, Spain, and Canada. We can see that the trends in CPI for these countries being fairly mixed economies are similar, however, there is a major differrence in CPI level, as we see that both of our developing countries Spain and India have significantly higher CPI levels, up untill 2020 due to the effect of the Covid pandemic. There is a slight exemption from EU nations,such as Sweden, as while they have similar trends to one another, the trends slightly differ from other countries. This could be due to the identical union rules that these countries follow. One Identical trend between all countries is the sharp increase in CPI following the Covid pandemic.
 
-![Violin plot](images/Analysis 3 Violin.png)
+![Violin plot](images/a3Violin.png)
 
 
 All plots in the violing graph show us that average CPI level for all of these countries, Is not too far off. All plots show a similar shape, showing that inflation trends are relatively similar for each of these plots.The 2 developing countries observe the highest CPI levels, higher than the 2 developed countries by a significant margin. This allows us to conclude that post year 2000, countries with similar economic policies enjoy similar trends, regardless of their development rate, however, developing countries tend to have a higher CPI level for the most part.
