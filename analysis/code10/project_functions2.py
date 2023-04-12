@@ -4,6 +4,12 @@ import numpy as np
 import pandas as pd
 from IPython.display import clear_output
 
+def transform(df : pd.DataFrame) -> pd.DataFrame:
+    df["TIME"] = pd.to_datetime(df['TIME'])
+    df = df[df["Value"] <= 10]
+    df = df[df["Value"] > -5]
+    return df
+
 def hide_i_mean_fix_warrnings():
     for i in range(10):
         clear_output(wait=True)
