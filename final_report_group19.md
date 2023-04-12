@@ -39,5 +39,24 @@ Canada has a low overall score, which is something I expected from our violin pl
 There could also be other factors at play such as Canada and the USA being very close trade partners and what happens in the US is often mirrored in Canada.  But in terms of Canada's policies, it seems Canada could be playing a leading role due to the data shown. Canada is so consistent in its policy and shows stability that this could indicate a strong economic prosperity or resilience. Because  Canada's  Bank of Canada economic policies is separate from politics, the CPI can make a good estimation of how well our economy is performing over an extended period of time.
 
 
+### Question 3
+####  Does a high CPI indicate whether an economy is developing or developed, and what are the trends between developing and developed countries of similar economic models?
+
+We can initially perform an analysis to see whether the trends in the different forms of CPI of a country are related to one another. 
+
+![line of different CPI subjects](images/a3line.png)
+
+We can see that Food prices and energy prices are both related to each other and have relatively similar trends. This means the total CPI of both together is good to use for a general long term CPI comparison across countries. Next is to see the trends of CPI of a developing country, next to a developed country. Choosing China, India, Sweden, and Canada as all have a similar econmic model post 2002. 
+
+![Multiple country barplot](images/Analysis 3 multiple facet.png)
+
+We can see that the system works similarly for India, Spain, and Canada. We can see that the trends in CPI for these countries being fairly mixed economies are similar, however, there is a major differrence in CPI level, as we see that both of our developing countries Spain and India have significantly higher CPI levels, up untill 2020 due to the effect of the Covid pandemic. There is a slight exemption from EU nations,such as Sweden, as while they have similar trends to one another, the trends slightly differ from other countries. This could be due to the identical union rules that these countries follow. One Identical trend between all countries is the sharp increase in CPI following the Covid pandemic.
+
+![Violin plot](images/Analysis 3 Violin.png)
+
+
+All plots in the violing graph show us that average CPI level for all of these countries, Is not too far off. All plots show a similar shape, showing that inflation trends are relatively similar for each of these plots.The 2 developing countries observe the highest CPI levels, higher than the 2 developed countries by a significant margin. This allows us to conclude that post year 2000, countries with similar economic policies enjoy similar trends, regardless of their development rate, however, developing countries tend to have a higher CPI level for the most part.
+
 ### Conclusion:
 This dataset concerning CPI in different countries was so extensive that each member of the group was able to answer different questions with the data provided. This allowed us to maximize the potential of our dataset and pull the most information out of it that we can then express to those observing and viewing our visualizations. By answering these different questions we were also able to convey how essential CPI is to everyone and how much it affects on both a day to day basis and in the long term. These factors shape the society around us and as displayed every country is affected differently and when you approach from a different angle there is more to learn about what is the best way to handle or control CPI. 
+
